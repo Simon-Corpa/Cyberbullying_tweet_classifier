@@ -6,23 +6,23 @@ El proyecto forma parte de la actividad evaluatoria del módulo Text Mining y re
 ## Metodología
 El proyecto se divide en dos cuadernos de Jupiter redactados y ejecutados mediante Google Colab. Ambos pasan por los mismos procesos, iniciandose con un análisis preexploratorio y terminando con el entrenamiento y la validación de un modelo.
 
-El primer cuaderno [Metodo1 main.ipynb]() basa los modelos en la propia muestra obteniendo predicciones con un mayor error. El segundo cuaderno [Metodo2 main.ipynb](), aprovecha la inclusión de modelos preentrenados de Huggingface mediante la libreria Transformers con el objetivo de simplificar las tareas de tokenización y modelización.
+El primer cuaderno [Metodo1 main.ipynb](https://github.com/Simon-Corpa/Cyberbullying_tweet_classifier/blob/main/Metodo1%20main.ipynb) basa los modelos en la propia muestra obteniendo predicciones con un mayor error. El segundo cuaderno [Metodo2 main.ipynb](https://github.com/Simon-Corpa/Cyberbullying_tweet_classifier/blob/main/Metodo2%20main.ipynb), aprovecha la inclusión de modelos preentrenados de Huggingface mediante la libreria Transformers con el objetivo de simplificar las tareas de tokenización y modelización.
 
 ### Análisis exploratorio, pre-procesado y normalización de los datos 
 Obtenemos el corpus y realizamos los imports.
 
-#### En [Metodo1 main.ipynb]():
+#### En [Metodo1 main.ipynb](https://github.com/Simon-Corpa/Cyberbullying_tweet_classifier/blob/main/Metodo1%20main.ipynb):
 Eliminamos duplicados, comporabmos el balance de la muestra, analizamos la distribución de una variable que contenga el número de caracteres de cada tweet y generamos Wordclouds entorno a las muestras con y sin cyberbullying.
 
 Normalizamos el texto mediante supresión de espacios y conversión a minúsculas. Sustitución de contracciones, conteo de los cambios y análisis de su distribución. Tokenizamos y normalizamos urls, menciones y números. Suprimimos stopwords. Contamos presencia de hastags.
 
-#### En [Metodo2 main.ipynb]():
+#### En [Metodo2 main.ipynb](https://github.com/Simon-Corpa/Cyberbullying_tweet_classifier/blob/main/Metodo2%20main.ipynb):
 Obviamos el análisis exploratorio contenido en el cuaderno previo y llevamos a cabo el preprocesado y normalización mediante el modelo _bert-base-uncased_ y la función AutoTokenizer.
 
 ### Vectorización de textos 
-#### En [Metodo1 main.ipynb]():
+#### En [Metodo1 main.ipynb](https://github.com/Simon-Corpa/Cyberbullying_tweet_classifier/blob/main/Metodo1%20main.ipynb):
 Vectorización TfIdf mediante _TfidfVectorizer_.
-#### En [Metodo2 main.ipynb]():
+#### En [Metodo2 main.ipynb](https://github.com/Simon-Corpa/Cyberbullying_tweet_classifier/blob/main/Metodo2%20main.ipynb):
 Obtenemos una función para trabajar con el estratificador de muestras de testeo de sklearn aplicando el Trainer de la libreria _Transform_ mediante el uso de una clase cedida en las instrucciones del proyecto planteado por Luis Gascó.
 
 ### Entrenamiento y validación del sistema
